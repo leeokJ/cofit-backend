@@ -63,4 +63,6 @@ Node.js와 Firebase를 백엔드로 사용하여 ‘코핏(Cofit)’ 애플리�
    ```
 
 ---
-이 README는 현재까지의 구현 현황을 요약한 문서이며, Flutter에서 전달된 데이터 처리 (JSON 형태), Flutter에서 Firestore 읽기 및 계산 결과 반환, Flutter와 연동 테스트가 필요하다 내용을 포함합니다.
+이 README는 현재까지의 구현 현황을 요약한 문서입니다.
+최근 BCC계산, 커스텀 음료 카페인 계산 로직을 구현했습니다.
+앞으로 Flutter에서 전달된 데이터 처리 (JSON 형태), Flutter에서 Firestore 읽기 및 계산 결과 반환, Flutter와 연동 테스트가 필요합니다.
