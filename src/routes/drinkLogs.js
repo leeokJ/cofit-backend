@@ -3,6 +3,7 @@ const router  = express.Router();
 const ctrl    = require('../controllers/drinkLogController');
 
 router.post('/',        ctrl.createDrinkLog);
+router.get('/', ctrl.getAllDrinkLogs);
 router.get('/:logid',   ctrl.getDrinkLog);
 router.get('/user/:userid', ctrl.getDrinkLogsByUser);
 router.put('/:logid',   ctrl.updateDrinkLog);

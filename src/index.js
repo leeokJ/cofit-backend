@@ -19,6 +19,8 @@ const coffeeDetailRouter = require('./routes/coffeeDetails');
 const energyDetailRouter = require('./routes/energyDetails');
 const customDetailRouter = require('./routes/customDetails');
 const fcmRouter = require('./routes/fcm');
+const bloodCaffeineRouter = require('./routes/bloodCaffeine');
+const customCoffeeRouter = require('./routes/customCoffee');
 
 const app = express();
 
@@ -37,6 +39,8 @@ app.use('/coffeeDetails', coffeeDetailRouter);
 app.use('/energyDetails', energyDetailRouter);
 app.use('/customDetails', customDetailRouter);
 app.use('/fcm', fcmRouter);
+app.use('/bloodCaffeine', bloodCaffeineRouter);
+app.use('/customCoffee', customCoffeeRouter);
 
 app.get('/', (req, res) => {
   res.send('Caffeine Tracker API');

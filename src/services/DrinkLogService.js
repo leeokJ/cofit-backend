@@ -34,6 +34,10 @@ class DrinkLogService {
   async deleteLog(id) {
     return this.dao.delete(id);
   }
+  
+  async getAllDrinkLogs() {
+    return this.dao.findAll();
+  }
 }
 
 module.exports = DrinkLogService;

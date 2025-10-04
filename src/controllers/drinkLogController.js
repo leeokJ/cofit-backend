@@ -45,3 +45,12 @@ exports.deleteDrinkLog = async (req, res, next) => {
     next(err);
   }
 };
+
+exports.getAllDrinkLogs = async (req, res, next) => {
+   try {
+     const list = await service.getAllDrinkLogs();
+      res.status(200).json({ success: true, data: list });
+    } catch (err) {
+      next(err);
+    }
+};
