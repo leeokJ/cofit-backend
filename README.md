@@ -40,8 +40,9 @@ Node.js와 Firebase를 백엔드로 사용하여 ‘코핏(Cofit)’ 애플리�
 
 ## 아직 수행되지 않은 작업
 
-- **CRUD 테스트**: DAO 계층 및 서비스·컨트롤러 통합에 대한 Create, Read, Update, Delete 기능 테스트 코드 작성 및 실행 필요
-- **API 테스트**: Thunder 클라이언트를 사용한 REST API 엔드포인트 검증 테스트 미실행
+- **Flutter 연동 테스트**: Flutter 앱에서 해당 API 호출을 실행한 뒤, 리턴된 데이터(resp.data)가 올바르게 파싱되어 화면에 표시되는지 점검 필요
+- **Flutter에서 전달된 데이터 처리 (JSON 형태)**: 클라이언트에서 서버로 전송한 JSON 페이로드를 백엔드가 올바르게 수신·디코딩하는지 확인 필요
+- **Flutter에서 Firestore 읽기 및 계산 결과 반환**: Flutter 앱에서 getById 호출 후 resp.data['bloodCaffeine'] 값을 FutureBuilder로 렌더링해 결과가 화면에 표시되는지 확인 필요
 
 ## 설치 및 실행 방법
 
