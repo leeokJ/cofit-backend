@@ -1,0 +1,33 @@
+# 환경 변수 템플릿(.env.example)은 추적
+!.env.example
+
+# 실제 환경 변수 파일은 무시
+.env
+.env.*
+
+# Firebase 서비스 계정 키
+serviceAccountKey.json
+firebase-adminsdk-*.json
+firebaseKey.json
+firebaserc
+firebase.json
+
+# Node 모듈 및 로그
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 테스트 커버리지
+coverage/
+.nyc_output/
