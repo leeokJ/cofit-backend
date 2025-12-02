@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // 혈중 카페인 기록 (bloodCaffeine)
+    match /bloodCaffeine/{docId} {
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      allow read:   if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+
+    // 커스텀 음료 기록 (customCoffee)
+    match /customCoffee/{docId} {
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      allow read:   if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update, delete: if false;
+    }
+
+    // 기타 모든 문서는 접근 금지
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
